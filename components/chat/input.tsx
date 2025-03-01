@@ -30,7 +30,7 @@ export default function ChatInput({
 
   return (
     <>
-      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 bg-transparent shadow-[0_-10px_15px_-2px_rgba(255,255,255,1)] text-base">
+      <div className="z-10 flex flex-col justify-center items-center fixed bottom-0 w-full p-5 bg-transparent shadow-none backdrop-blur-lg text-base">
         <div className="max-w-screen-lg w-full">
           <Form {...form}>
             <form
