@@ -69,11 +69,12 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
+  html, body {
     @apply text-foreground;
-    background: linear-gradient(to bottom, #0a0f2c, #3a1d6e)
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0a0f2c, #3a1d6e);
   }
 }
+
