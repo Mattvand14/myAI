@@ -73,6 +73,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(to bottom, #0a0f2c, #3a1d6e)
   }
 }
