@@ -49,7 +49,7 @@ export default function ChatInput({
                         {...field}
                         onChange={handleInputChange}
                         value={input}
-                        className="border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent"
+                        className=" text-white border-none focus-visible:ring-0 focus-visible:ring-offset-0 bg-transparent"
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
                         placeholder="Type your message here..."
