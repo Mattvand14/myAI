@@ -17,7 +17,7 @@ export default function ChatHeader({
   clearMessages: () => void;
 }) {
   return (
-    <div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-transparent shadow-none backdrop-blur-lg">
+    <div className="z-10 flex justify-center items-center fixed top-0 w-full p-5 bg-transparent shadow-none">
       <div className="flex w-full">
         <div className="flex-0 w-[100px]"></div>
         <div className="flex-1 flex justify-center items-center gap-2">
@@ -27,7 +27,7 @@ export default function ChatHeader({
         <div className="flex-0 w-[100px] flex justify-end items-center">
           <Button
             onClick={clearMessages}
-            className="gap-2 shadow-sm"
+            className="flex items-center gap-2 shadow-sm rounded-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold transition duration-300 hover:from-blue-600 hover:to-purple-600"
             variant="outline"
             size="sm"
           >
