@@ -4,6 +4,10 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a0f2c, #3a1d6e);
 }
 
 @layer utilities {
@@ -68,17 +72,5 @@ body {
   }
 }
 
-@layer base {
-  html {
-    @apply text-foreground;
-    min-height: 100%;
-    background: linear-gradient(to bottom, #0a0f2c, #3a1d6e);
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-  }
-}
 
 
