@@ -1,13 +1,13 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import billboard
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 @app.route('/billboard', methods=['GET'])
 def get_billboard():
-    # Fetch the current Hot 100 chart using billboard.py
     chart = billboard.ChartData('hot-100')
-    # Create a list of dictionaries for each entry
     entries = [{
         "rank": entry.rank,
         "title": entry.title,
