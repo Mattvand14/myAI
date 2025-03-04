@@ -38,6 +38,10 @@ export default function Chat() {
     async function fetchBillboard() {
       try {
         const res = await fetch("/api/billboard");
+        if (!res.ok) {
+          console.error("Error fetching Billboard data:", res.statusText);
+          return;
+        }
         const data = await res.json();
         setBillboardData(data);
       } catch (err) {
@@ -46,6 +50,7 @@ export default function Chat() {
     }
     fetchBillboard();
   }, []);
+  
 
   return (
     <>
