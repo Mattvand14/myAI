@@ -1,3 +1,6 @@
+"use client";
+
+
 import React, { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import ChatInput from "@/components/chat/input";
