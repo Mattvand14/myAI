@@ -89,7 +89,7 @@ export default function Chat() {
             <ul className="text-white">
               {billboardData.second_half.map((entry, index) => (
                 <li key={index} className="mb-2">
-                  <span className="font-bold mr-2">{index + 50}.</span>
+                  <span className="font-bold mr-2">{index + 51}.</span>
                   <span className="text-sm">{entry.title}</span> by {entry.artist}
                 </li>
               ))}
