@@ -4,11 +4,12 @@
   "private": true,
 "scripts": {
   "dev": "next dev",
-  "generate-billboard": "python Billboard.py",
+  "generate-billboard": "python3 Billboard.py",
   "build": "npm run generate-billboard && next build",
   "start": "next start",
   "lint": "next lint"
 }
+
 ,
   "dependencies": {
     "@ai-sdk/openai": "^0.0.66",
