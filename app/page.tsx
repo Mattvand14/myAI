@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Tilt from "react-parallax-tilt"; // or your preferred tilt component
+import Tilt from "react-parallax-tilt";
 import ChatInput from "@/components/chat/input";
 import ChatMessages from "@/components/chat/messages";
 import useApp from "@/hooks/use-app";
@@ -16,7 +16,6 @@ interface BillboardData {
   second_half: BillboardEntry[];
 }
 
-
 export default function Chat() {
   const {
     messages,
@@ -28,7 +27,6 @@ export default function Chat() {
     clearMessages,
   } = useApp();
 
-  // State for Billboard data
   const [billboardData, setBillboardData] = useState<BillboardData>({
     first_half: [],
     second_half: [],
@@ -37,7 +35,7 @@ export default function Chat() {
   useEffect(() => {
     async function fetchBillboard() {
       try {
-        const res = await fetch("/api/billboard");
+        const res = await fetch("/billboard.json");
         if (!res.ok) {
           console.error("Error fetching Billboard data:", res.statusText);
           return;
@@ -50,7 +48,6 @@ export default function Chat() {
     }
     fetchBillboard();
   }, []);
-  
 
   return (
     <>

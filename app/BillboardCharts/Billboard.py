@@ -20,4 +20,7 @@ if __name__ == "__main__":
         "first_half": list(map(serialize, first_half)),
         "second_half": list(map(serialize, second_half))
     }
-    print(json.dumps(data))
+
+    # Write the JSON to the public directory so Next.js can serve it
+    with open("public/billboard.json", "w") as f:
+        json.dump(data, f)
