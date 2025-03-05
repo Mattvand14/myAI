@@ -55,8 +55,8 @@ export default function Chat() {
       <div className="flex justify-center items-center h-screen">
         {/* Left Tilt Panel: First Half */}
         <Tilt className="w-1/4 p-4" tiltMaxAngleX={10} tiltMaxAngleY={10}>
-          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto transition duration-300 hover:shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - First Half</h2>
+          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto scrollbar-hide transition duration-300 hover:shadow-xl">
+            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - Second Half</h2>
             <ul className="text-white">
               {billboardData.first_half.map((entry, index) => (
                 <li key={index} className="mb-2">
@@ -65,6 +65,15 @@ export default function Chat() {
                 </li>
               ))}
             </ul>
+            <style jsx global>{`
+              .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+              }
+              .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+              }
+            `}</style>
           </div>
         </Tilt>
 
@@ -75,16 +84,25 @@ export default function Chat() {
 
         {/* Right Tilt Panel: Second Half */}
         <Tilt className="w-1/4 p-4" tiltMaxAngleX={10} tiltMaxAngleY={10}>
-          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto transition duration-300 hover:shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - First Half</h2>
+          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto scrollbar-hide transition duration-300 hover:shadow-xl">
+            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - Second Half</h2>
             <ul className="text-white">
               {billboardData.second_half.map((entry, index) => (
                 <li key={index} className="mb-2">
-                  <span className="font-bold mr-2">{index + 1}.</span>
+                  <span className="font-bold mr-2">{index + 50}.</span>
                   <span className="text-sm">{entry.title}</span> by {entry.artist}
                 </li>
               ))}
             </ul>
+            <style jsx global>{`
+              .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+              }
+              .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+              }
+            `}</style>
           </div>
         </Tilt>
 
