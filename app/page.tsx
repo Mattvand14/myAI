@@ -55,18 +55,18 @@ export default function Chat() {
       <div className="flex justify-center items-center h-screen">
         {/* Left Tilt Panel: First Half */}
         <Tilt className="w-1/4 p-4" tiltMaxAngleX={10} tiltMaxAngleY={10}>
-          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-full overflow-auto transition duration-300 hover:shadow-xl">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto transition duration-300 hover:shadow-xl">
             <h2 className="text-2xl font-bold text-white mb-4">Top 100 - First Half</h2>
             <ul className="text-white">
               {billboardData.first_half.map((entry, index) => (
                 <li key={index} className="mb-2">
-                  <span className="font-medium">{entry.title}</span> by {entry.artist}
+                  <span className="font-bold mr-2">{index + 1}.</span>
+                  <span className="text-sm">{entry.title}</span> by {entry.artist}
                 </li>
               ))}
             </ul>
           </div>
         </Tilt>
-
 
         {/* Center: Chat Messages */}
         <div className="flex flex-col max-w-screen-lg w-full h-full p-5">
@@ -75,17 +75,20 @@ export default function Chat() {
 
         {/* Right Tilt Panel: Second Half */}
         <Tilt className="w-1/4 p-4" tiltMaxAngleX={10} tiltMaxAngleY={10}>
-          <div className="bg-white shadow p-4 rounded h-full overflow-auto">
-            <h2 className="text-xl font-bold mb-4">Top 100 - Second Half</h2>
-            <ul>
+          <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto transition duration-300 hover:shadow-xl">
+            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - First Half</h2>
+            <ul className="text-white">
               {billboardData.second_half.map((entry, index) => (
                 <li key={index} className="mb-2">
-                  <span className="font-medium">{entry.title}</span> by {entry.artist}
+                  <span className="font-bold mr-2">{index + 1}.</span>
+                  <span className="text-sm">{entry.title}</span> by {entry.artist}
                 </li>
               ))}
             </ul>
           </div>
         </Tilt>
+
+
       </div>
       <ChatInput
         handleInputChange={handleInputChange}
