@@ -1,12 +1,12 @@
-import generate_billboard
+import billboard
 import json
 
 def get_hot_100_chart_first_half():
-    chart = generate_billboard.ChartData('hot-100')
+    chart = billboard.ChartData('hot-100')
     return chart[0:50]
 
 def get_hot_100_chart_second_half():
-    chart = generate_billboard.ChartData('hot-100')
+    chart = billboard.ChartData('hot-100')
     return chart[50:100]
 
 if __name__ == "__main__":
