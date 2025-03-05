@@ -56,7 +56,7 @@ export default function Chat() {
         {/* Left Tilt Panel: First Half */}
         <Tilt className="w-1/4 p-4" tiltMaxAngleX={10} tiltMaxAngleY={10}>
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto scrollbar-hide transition duration-300 hover:shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - Second Half</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Billboard Top 100: 1-50</h2>
             <ul className="text-white">
               {billboardData.first_half.map((entry, index) => (
                 <li key={index} className="mb-2">
@@ -86,7 +86,7 @@ export default function Chat() {
         {/* Right Tilt Panel: Second Half */}
         <Tilt className="w-1/4 p-4" tiltMaxAngleX={10} tiltMaxAngleY={10}>
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg p-6 rounded-2xl h-[70vh] overflow-y-auto scrollbar-hide transition duration-300 hover:shadow-xl">
-            <h2 className="text-2xl font-bold text-white mb-4">Top 100 - Second Half</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Billboard Top 100: 51-100</h2>
             <ul className="text-white">
               {billboardData.second_half.map((entry, index) => (
                 <li key={index} className="mb-2">
