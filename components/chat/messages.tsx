@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react";
 import { DisplayMessage } from "@/types";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -69,13 +68,6 @@ export default function ChatMessages({
   messages: DisplayMessage[];
   indicatorState: LoadingIndicator[];
 }) {
-  const endOfMessagesRef = useRef<HTMLDivElement>(null);
-
-  // Trigger autoscroll on messages (or indicatorState) update
-  useEffect(() => {
-    endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, indicatorState]);
-
   const showLoading =
     indicatorState.length > 0 &&
     messages.length > 0 &&
@@ -86,8 +78,7 @@ export default function ChatMessages({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      // Ensure the container is scrollable
-      className="flex flex-col flex-1 p-1 gap-3 overflow-y-auto"
+      className="flex flex-col flex-1 p-1 gap-3"
     >
       <div className="h-[60px]"></div>
       {messages.length === 0 ? (
@@ -109,8 +100,7 @@ export default function ChatMessages({
         ))
       )}
       {showLoading && <Loading indicatorState={indicatorState} />}
-      {/* Dummy element to ensure autoscroll */}
-      <div ref={endOfMessagesRef} className="h-[1px]" />
+      <div className="h-[225px]"></div>
     </motion.div>
   );
 }
