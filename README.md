@@ -18,7 +18,7 @@ Welcome to **MIC** – your ultimate guide to the business side of music! Whethe
 2. **Ask Away:** Type in your music-related questions and let MIC do the rest.
 3. **Learn & Succeed:** Use the insights to boost your music journey!
 
-[**Start Chatting Now!**](#)
+[**Start Chatting Now!**](https://my-ai-xi-ten.vercel.app/)
 
 ---
 
